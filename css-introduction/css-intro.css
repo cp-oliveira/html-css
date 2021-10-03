@@ -1,0 +1,61 @@
+/* 
+1. ID Specificity 
+2. Cascade Specifity from top to bottom.
+3. Inline Specifity
+4. Attr Selectors
+*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5e8ef;
+}
+
+/* #card-with-id {
+    background-color: red;
+} */
+
+.card {
+    background-color: white;
+    display: flex;
+    width: 450px;
+    border-radius: 8px;
+    padding: 16px;
+    color: rgb(20, 20, 20);
+    position: relative;
+}
+
+/* .card {
+    background-color: orange;
+} */
+
+.card img {
+    width: 150px;
+    border-radius: 8px;
+    margin: 0 8px 0 0;
+}
+
+.card p {
+    line-height: 150%;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: 100;
+    margin: 0;
+}
+
+
+.btn {
+    background-color: #8a34fe;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    position: absolute;
+    min-width: 100px;
+    bottom: 12px;
+    right: 12px;
+    line-height: 40px;
+    font-size: 14px;
+}

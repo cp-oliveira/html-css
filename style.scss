@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f8fa;
+    font-family: 'IBM Plex Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@mixin dflex() {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header {
+    background: black;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        height: 40px;
+    }
+}
+
+.classes_filter {
+    width: 100%;
+    display: flex;
+    margin: 32px auto;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: #f7f8fa;
+
+    .filter {
+        background-color: gainsboro;
+        margin: 8px;
+        padding: 8px;
+        min-width: 100px;
+        text-align: center;
+        border-radius: 2px;
+
+        &_active {
+            background-color: blue;
+            color: white;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.classes_container,
+.resources_container {
+    @include dflex();
+    justify-content: center;
+    align-content: center;
+    column-gap: 12px;
+    row-gap: 12px;
+    width: calc(100%);
+    margin: 0 auto;
+    padding: 32px 0;
+
+}
+
+.class_thumbnail {
+    background: white;
+    width: calc(100% / 5);
+    height: 125px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column;
+    position: relative;
+    padding: 12px;
+
+    .class_tag {
+        justify-self: flex-end;
+        padding: 0 8px;
+        border-radius: 2px;
+        line-height: 150%;
+        font-size: 0.8rem;
+    }
+
+    .class_name {
+        align-self: flex-start;
+        margin-top: auto;
+        padding: 0;
+        margin: auto 0 0 0;
+        font-size: 1.2em;
+    }
+}
+
+.class_thumbnail {
+    &::before {
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 0;
+        background-color: red;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        border-radius: 4px 0 0 4px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        transition: all .6s ease-in-out;
+
+        &::before {
+            height: 100%;
+            transition: all .4s ease-in-out;
+        }
+    }
+}
+
+.class_thumbnail[data-tag="html"] {
+    &::before {
+        background-color: orange;
+    }
+
+    .class_tag {
+        background: orange;
+        color: black;
+    }
+}
+
+.class_thumbnail[data-tag="css"] {
+    &::before {
+        background-color: blue;
+    }
+
+    .class_tag {
+        background: blue;
+        color: white;
+    }
+}
+
+.class_thumbnail[data-tag="resources"] {
+    &::before {
+        background-color: green;
+    }
+
+    .class_tag {
+        background: green;
+        color: white;
+    }
+}
+
+
+
+
+// resources
+.resource {
+    background-color: white;
+    width: 900px;
+    height: 40px;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+    position: relative;
+    padding: 0 12px;
+    z-index: 2;
+
+    &::before {
+        background: gainsboro;
+        color: white;
+        width: 0;
+        display: block;
+        height: 100%;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 0px;
+        border-radius: 4px;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+            transition: all .8s ease-in-out;
+        }
+    }
+
+    .resource_tag {
+        font-size: 0.9rem;
+        padding: 0 8px;
+        border-radius: 2px;
+    }
+
+    [data-tag="html"] {
+        background: orange;
+        color: black;
+    }
+
+    [data-tag="css"] {
+        background: blue;
+        color: white;
+    }
+
+    [data-tag="resources"] {
+        background: green;
+        color: white;
+    }
+}
+
+
+
+// media queries
+@import 'media-queries';

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Position</title>
+</head>
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+ .parent {
+    width: 90%;
+    margin: 16px auto;
+    border: 1px solid gray;
+    border-radius: 4px;
+    display: block;
+    height: 300px;
+}
+
+.child {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+.p-relative .child {
+    left: 16px;
+    top: 16px;
+    position: relative;
+}
+
+.p-absolute .child {
+    left: 16px;
+    top: 16px;
+    position: absolute;
+}
+
+.p-fixed .child {
+    left: 16px;
+    top: 16px;
+    position: fixed;
+}
+
+.p-sticky .child {
+    left: 16px;
+    top: 100px;
+    position: sticky;
+} */
+
+</style>
+
+<body>
+    <!-- position relative -->
+    <h3><pre>position: relative</pre></h3>
+    <div class="parent p-relative">
+        <div class="child">R</div>
+    </div>
+
+    <!-- position absolute -->
+    <h3><pre>position: absolute</pre></h3>
+    <div class="parent p-absolute">
+        <div class="child">A</div>
+    </div>
+
+     <!-- position sticky -->
+     <h3><pre>position: sticky</pre></h3>
+     <div class="parent p-sticky">
+        <div class="child">S</div>
+    </div>
+
+     <!-- position fixed -->
+     <h3><pre>position: fixed</pre></h3>
+     <div class="parent p-fixed">
+        <div class="child">F</div>
+    </div>
+
+
+</body>
+
+</html>
