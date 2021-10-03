@@ -1,0 +1,69 @@
+html, body {margin: 0;padding: 0;}
+.sprint {
+    width: 100%;
+    background-color: green;
+    height: 75px;
+    align-items: center;
+    display: flex;
+}
+
+.sprint::after {
+    content: '';
+    width: 90%;
+    height: 1px;
+    border-top: 2px dashed white;
+}
+
+
+.sprint:nth-child(1) .object {
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    position: relative;
+    animation: sprint 4s ease-in-out infinite;
+}
+
+.sprint:nth-child(2) .object {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    position: relative;
+    animation: sprint_2 4s ease infinite;
+}
+
+@keyframes sprint {
+    0% {
+        left: 0;
+        transform: scale(1);
+        background-color: yellow;
+    }
+
+    50% {
+        left: 500px;
+        transform: scale(1.5)
+    }
+
+    100% {
+        left: 0;
+        transform: scale(1);
+        background-color: blue;
+    }
+}
+
+@keyframes sprint_2 {
+    0% {
+        left: 0;
+        transform: rotate(0deg);
+        background-color: yellow;
+    }
+
+    50% {
+        left: 500px;
+     }
+
+    100% {
+        left: 0;
+        transform: rotate(90deg);
+        background-color: blue;
+    }
+}

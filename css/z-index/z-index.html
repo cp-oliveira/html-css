@@ -1,0 +1,73 @@
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .z-container {
+        position: relative;
+    }
+
+    .z-index {
+        background-color: gray;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        transform: skew(2deg,
+                352deg);
+        display: flex;
+        justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 14px;
+    color: white;
+    padding: 16px;
+    box-shadow: 4px 6px 9px 3px #00000030;
+    }
+
+    .z-index.z-index-1 {
+        background-color: gray;
+        top: -20px;
+        left: -45px;
+        filter: brightness(0.3);
+        z-index: 0;
+    }
+
+    .z-index.z-index-2 {
+        background-color: rgb(245, 58, 58);
+        top: -40px;
+        left: -65px;
+        filter: brightness(0.5);
+        z-index: 1;
+    }
+
+    .z-index.z-index-3 {
+        background-color: rgb(70, 70, 250);
+        top: -60px;
+        left: -85px;
+        filter: brightness(0.7);
+        z-index: 2;
+    }
+
+    .z-index.z-index-4 {
+        background-color: rgb(43, 133, 43);
+        top: -80px;
+        left: -105px;
+        filter: brightness(0.9);
+        z-index: 3;
+    }
+</style>
+<div class="z-container">
+    <div class="z-index z-index-1">
+        z-index-1
+    </div>
+    <div class="z-index z-index-2">
+        z-index-2
+    </div>
+    <div class="z-index z-index-3">
+        z-index-3
+    </div>
+    <div class="z-index z-index-4">
+        z-index-4
+    </div>
+</div>
