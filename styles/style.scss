@@ -152,7 +152,7 @@ header {
     &_disabled {
         opacity: .3 !important;
         &:hover {
-            cursor: none;   
+            cursor: default !important;   
             box-shadow: none !important; 
             &::before {
                 height: 0% !important;

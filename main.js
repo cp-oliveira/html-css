@@ -33,8 +33,8 @@ filterClasses = (filterElement) => {
 disableLinks = () => {
     let classes = document.querySelectorAll('.class_thumbnail');
     classes.forEach(classCard => {
-        if( classCard.getAttribute('href') === '' ) {
-            classCard.classList.add('class_thumbnail_disabled')
+         if(classCard.getAttribute('href') === '' ) {
+             classCard.classList.add('class_thumbnail_disabled')
         }
     })
 }

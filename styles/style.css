@@ -130,7 +130,7 @@ header img {
   opacity: 0.3 !important;
 }
 .class_thumbnail_disabled:hover {
-  cursor: none;
+  cursor: default !important;
   box-shadow: none !important;
 }
 .class_thumbnail_disabled:hover::before {
