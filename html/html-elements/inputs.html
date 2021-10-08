@@ -1,0 +1,66 @@
+<style>
+    form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form_group label {
+    margin-bottom: 4px;
+}
+.form_group input {
+    padding: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: blue;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+}
+</style>
+<form >
+    <div class="form_group">
+        <label>Name</label>
+        <input name="name" type="text" placeholder="Write your name">
+    </div>
+    
+    <div class="form_group">
+        <label>Username</label>
+        <input name="username" type="text" placeholder="Write your username">
+    </div>
+    
+    <div class="form_group">
+        <label>Age</label>
+        <input name="age" type="number" placeholder="Write your age" min=18>
+    </div>
+    
+    <div class="form_group">
+        <label>Job Title</label>
+        <input name="job-title" type="text" placeholder="Job Title">
+    </div>
+    
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    let data = {}
+    document.querySelector('button').addEventListener('click', function() {
+        event.preventDefault()
+        document.querySelectorAll('input').forEach( element => {
+                let key = element.getAttribute('name')
+                let value = element.value;
+                data[key] = value;
+        })
+        console.log(data)
+    })
+</script>
+
+
