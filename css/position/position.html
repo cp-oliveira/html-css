@@ -38,10 +38,14 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-/* 
+
 .p-relative .child {
-    left: 16px;
+    right: 16px;
     top: 16px;
+    position: relative;
+}
+
+.parent {
     position: relative;
 }
 
@@ -59,13 +63,19 @@ html, body {
 
 .p-sticky .child {
     left: 16px;
-    top: 100px;
+    top: 50px;
     position: sticky;
-} */
+} 
 
 </style>
 
 <body>
+    <!-- position sticky -->
+    <h3><pre>position: sticky</pre></h3>
+    <div class="parent p-sticky">
+       <div class="child">S</div>
+   </div>
+
     <!-- position relative -->
     <h3><pre>position: relative</pre></h3>
     <div class="parent p-relative">
@@ -78,17 +88,13 @@ html, body {
         <div class="child">A</div>
     </div>
 
-     <!-- position sticky -->
-     <h3><pre>position: sticky</pre></h3>
-     <div class="parent p-sticky">
-        <div class="child">S</div>
-    </div>
+     
 
      <!-- position fixed -->
-     <h3><pre>position: fixed</pre></h3>
+     <!-- <h3><pre>position: fixed</pre></h3>
      <div class="parent p-fixed">
         <div class="child">F</div>
-    </div>
+    </div> -->
 
 
 </body>

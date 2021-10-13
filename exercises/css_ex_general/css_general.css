@@ -109,19 +109,4 @@ pre {
 
 
 /* place your code below */
-.box-1 {
-    position: relative;
-    margin: 0 auto;
-    top: 50px;
-}
-
-.box-2 {
-    position: absolute;
-    top: 50px;
-}
-
-.box-3 {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
+ 
