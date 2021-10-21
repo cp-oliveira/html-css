@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    pre.example {
+        color: gray;
+        margin-bottom: 24px;
+        border-bottom: 1px solid gainsboro;
+        padding-bottom: 12px;
+    }
+</style>
+<body>
+
+<pre>Selects all elements with class="intro"</pre>
+<pre class="example">.class	.intro	</pre>
+
+<pre>Selects all elements with both name1 and name2 set within its class attribute</pre>
+<pre class="example">.class1.class2	.name1.name2	</pre>
+
+<pre>Selects all elements with name2 that is a descendant of an element with name1</pre>
+<pre class="example">.class1 .class2	.name1 .name2	</pre>
+
+<pre>Selects the element with id="firstname"</pre>
+<pre class="example">#id	#firstname	</pre>
+
+<pre>Selects all elements</pre>
+<pre class="example">*	*	</pre>
+
+<pre>Selects all p elements</pre>
+<pre class="example">element	p	</pre>
+
+<pre>Selects all p elements with class="intro"</pre>
+<pre class="example">element.class	p.intro	</pre>
+
+<pre>Selects all div elements and all p elements</pre>
+<pre class="example">element,element	div, p	</pre>
+
+<pre>Selects all p  elements inside div elements</pre>
+<pre class="example">element element	div p	</pre>
+
+<pre>Selects all p elements where the parent is a div element</pre>
+<pre class="example">element>element	div > p	</pre>
+
+<pre>Selects the first p element that is placed immediately after div elements</pre>
+<pre class="example">element+element	div + p	</pre>
+
+<pre>Selects every ul element that is preceded by a p element</pre>
+<pre class="example">element1~element2	p ~ ul	</pre>
+
+<pre>Selects all elements with a target attribute</pre>
+<pre class="example">[attribute]	[target]	</pre>
+
+<pre>Selects all elements with target="_blank"</pre>
+<pre class="example">[attribute=value]	[target=_blank]	</pre>
+
+<pre>Selects all elements with a title attribute containing the word "flower"</pre>
+<pre class="example">[attribute~=value]	[title~=flower]	</pre>
+
+<pre>Selects all elements with a lang attribute value equal to "en" or starting with "en-"</pre>
+<pre class="example">[attribute|=value]	[lang|=en]	</pre>
+
+<pre>Selects every <a> element whose href attribute value begins with "https"</pre>
+<pre class="example">[attribute^=value]	a[href^="https"]	</pre>
+
+<pre>Selects every <a> element whose href attribute value ends with ".pdf"</pre>
+<pre class="example">[attribute$=value]	a[href$=".pdf"]	</pre>
+
+<pre>Selects every <a> element whose href attribute value contains the substring "w3schools"</pre>
+<pre class="example">[attribute*=value]	a[href*="w3schools"]	</pre>
+
+<pre>Selects the active link</pre>
+<pre class="example">:active	a:active	</pre>
+
+<pre>::after	p::after	</pre>
+<pre class="example">Insert something after the content of each p element</pre>
+
+<pre>::before	p::before	</pre>
+<pre class="example">Insert something before the content of each p element</pre>  
+
+<pre>Selects every checked input element</pre>
+<pre class="example">:checked	input:checked	</pre>
+
+<pre>Selects the default input element</pre>
+<pre class="example">:default	input:default	</pre>
+
+<pre>Selects every disabled input element</pre>
+<pre class="example">:disabled	input:disabled	</pre>
+
+<pre>Selects every p element that has no children (including text nodes)</pre>
+<pre class="example">:empty	p:empty	</pre>
+
+<pre>Selects every enabled input element</pre>
+<pre class="example">:enabled	input:enabled	</pre>
+
+<pre>Selects every p element that is the first child of its parent</pre>
+<pre class="example">:first-child	p:first-child	</pre>
+
+<pre>Selects the first letter of every p element</pre>
+<pre class="example">::first-letter	p::first-letter	</pre>
+
+<pre>Selects the first line of every p element</pre>
+<pre class="example">::first-line	p::first-line	</pre>
+
+<pre>Selects every p element that is the first p element of its parent</pre>
+<pre class="example">:first-of-type	p:first-of-type	</pre>
+
+<pre>Selects the input element which has focus</pre>
+<pre class="example">:focus	input:focus	</pre>
+
+<pre>Selects the element that is in full-screen mode</pre>
+<pre class="example">:fullscreen	:fullscreen	</pre>
+
+<pre>Selects links on mouse over</pre>
+<pre class="example">:hover	a:hover	</pre>
+
+<pre>Selects input elements with a value within a specified range</pre>
+<pre class="example">:in-range	input:in-range	</pre>
+
+<pre>Selects input elements that are in an indeterminate state</pre>
+<pre class="example">:indeterminate	input:indeterminate	</pre>
+
+<pre>Selects all input elements with an invalid value</pre>
+<pre class="example">:invalid	input:invalid	</pre>
+
+<pre>Selects every p element with a lang attribute equal to "it" (Italian)</pre>
+<pre class="example">:lang(language)	p:lang(it)	</pre>
+
+<pre>Selects every p element that is the last child of its parent</pre>
+<pre class="example">:last-child	p:last-child	</pre>
+
+<pre>Selects every p element that is the last p element of its parent</pre>
+<pre class="example">:last-of-type	p:last-of-type	</pre>
+
+<pre>Selects all unvisited links</pre>
+<pre class="example">:link	a:link	</pre>
+
+<pre>Selects the markers of list items</pre>
+<pre class="example">::marker	::marker	</pre>
+
+<pre>Selects every element that is not a p element</pre>
+<pre class="example">:not(selector)	:not(p)	</pre>
+
+<pre>Selects every p element that is the second child of its parent</pre>
+<pre class="example">:nth-child(n)	p:nth-child(2)	</pre>
+
+<pre>Selects every p element that is the second child of its parent, counting from the last child</pre>
+<pre class="example">:nth-last-child(n)	p:nth-last-child(2)	</pre>
+
+<pre>Selects every p element that is the second p element of its parent, counting from the last child</pre>
+<pre class="example">:nth-last-of-type(n)	p:nth-last-of-type(2)	</pre>
+
+<pre>Selects every p element that is the second p element of its parent</pre>
+<pre class="example">:nth-of-type(n)	p:nth-of-type(2)	</pre>
+
+<pre>Selects every p element that is the only p element of its parent</pre>
+<pre class="example">:only-of-type	p:only-of-type	</pre>
+
+<pre>Selects every p element that is the only child of its parent</pre>
+<pre class="example">:only-child	p:only-child	</pre>
+
+<pre>Selects input elements with no "required" attribute</pre>
+<pre class="example">:optional	input:optional	</pre>
+
+<pre>Selects input elements with a value outside a specified range</pre>
+<pre class="example">:out-of-range	input:out-of-range	</pre>
+
+<pre>Selects input elements with the "placeholder" attribute specified</pre>
+<pre class="example">::placeholder	input::placeholder	</pre>
+
+<pre>Selects input elements with the "readonly" attribute specified</pre>
+<pre class="example">:read-only	input:read-only	</pre>
+
+<pre>Selects input elements with the "readonly" attribute NOT specified</pre>
+<pre class="example">:read-write	input:read-write	</pre>
+
+<pre>Selects input elements with the "required" attribute specified</pre>
+<pre class="example">:required	input:required	</pre>
+
+<pre>Selects the document's root element</pre>
+<pre class="example">:root	:root	</pre>
+
+<pre>Selects the portion of an element that is selected by a user</pre>
+<pre class="example">::selection	::selection	</pre>
+
+<pre>Selects the current active #news element (clicked on a URL containing that anchor name)</pre>
+<pre class="example">:target	#news:target	</pre>
+
+<pre>Selects all input elements with a valid value</pre>
+<pre class="example">:valid	input:valid	</pre>
+
+<pre>Selects all visited links</pre>
+<pre class="example">:visited	a:visited	</pre>
+</body>
+</html>

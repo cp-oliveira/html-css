@@ -1,42 +1,9 @@
 /* 
 attr()
 
------------- <filter-function> values
-filter: blur(5px);
-filter: brightness(0.4);
-filter: contrast(200%);
-filter: drop-shadow(16px 16px 20px blue);
-filter: grayscale(50%);
-filter: hue-rotate(90deg);
-filter: invert(75%);
-filter: opacity(25%);
-filter: saturate(30%);
-filter: sepia(60%); 
- 
------------- <trasnform-function> values  
-transform: none
-transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
-transform: translate(12px, 50%)
-transform: translateX(2em)
-transform: translateY(3in)
-transform: scale(2, 0.5)
-transform: scaleX(2)
-transform: scaleY(0.5)
-transform: rotate(0.5turn)
-transform: skewX(30deg)
-transform: skewY(1.07rad)
-transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0)
-transform: translate3d(12px, 50%, 3em)
-transform: translateZ(2px)
-transform: scale3d(2.5, 1.2, 0.3)
-transform: scaleZ(0.3)
-transform: rotate3d(1, 2.0, 3.0, 10deg)
-transform: rotateX(10deg)
-transform: rotateY(10deg)
-transform: rotateZ(10deg)
-transform: perspective(17px)
 
-transform: translateX(10px) rotate(10deg) translateY(5px) 
+ 
+
  
 ------------ <color-function> values 
 color || background-color: rgb() // rgb(red, green, blue)
@@ -81,4 +48,207 @@ body {
 
 .example img {
     width: 400px;
+}
+
+
+
+/* nth examples -- */
+/* ```css
+var()
+calc()
+
+// pseudo functions
+:nth-child()
+:nth-last-child()
+:nth-of-type()
+:nth-last-of-type()
+
+// sizing and transform functions
+scaleX()
+scaleY()
+scaleZ()
+scale3d()
+scale()
+
+translateX()
+translateY()
+translateZ()
+translate3d()
+translate()
+
+perspective()
+
+rotateX()
+rotateY()
+rotateZ()
+rotate3d()
+rotate()
+
+skewX()
+skewY()
+skew()
+
+brightness()
+blur()
+contrast()
+grayscale()
+invert()
+opacity()
+saturate()
+*/
+.orange {
+    background: orange;
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: 8px;
+    border-radius: 100%;
+  }
+  
+  .orange:not(.orange-black) {
+    background: gray;
+  }
+  
+  /*
+  .orange:nth-child(4) {
+    background: blue;
+  }
+  
+  .orange:nth-child(even) {
+    background-color: green;
+  }
+  */
+  
+  /*
+  .orange:last-child {
+    background: blue;
+  }
+  */
+  /*
+  .orange:nth-last-child(4) {
+    background: pink;
+  }
+  */
+
+
+
+  
+
+  /* transform */
+
+
+  .element {
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+    margin: 16px;
+}
+
+
+
+
+/* FILTER FUNCTIONS
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+*/
+
+/* 
+filter: blur(5px);
+filter: brightness(0.4);
+filter: contrast(200%);
+filter: drop-shadow(16px 16px 20px blue);
+filter: grayscale(50%);
+filter: hue-rotate(90deg);
+filter: invert(75%);
+filter: opacity(25%);
+filter: saturate(30%);
+filter: sepia(60%); 
+*/
+
+
+/* TRANSFORM FUNCTIONS
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+*/
+/* 
+transform: none
+transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
+transform: translate(12px, 50%)
+transform: translateX(2em)
+transform: translateY(3in)
+transform: scale(2, 0.5)
+transform: scaleX(2)
+transform: scaleY(0.5)
+transform: rotate(0.5turn)
+transform: skewX(30deg)
+transform: skewY(1.07rad)
+transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0)
+transform: translate3d(12px, 50%, 3em)
+transform: translateZ(2px)
+transform: scale3d(2.5, 1.2, 0.3)
+transform: scaleZ(0.3)
+transform: rotate3d(1, 2.0, 3.0, 10deg)
+transform: rotateX(10deg)
+transform: rotateY(10deg)
+transform: rotateZ(10deg)
+transform: perspective(17px)
+transform: translateX(10px) rotate(10deg) translateY(5px) 
+*/
+
+/* links interessantes */
+    /* https://css-transform.moro.es/ */
+
+
+
+/* ANIMATION FUNCTIONS
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+*/
+/* 
+transform: none
+transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
+transform: translate(12px, 50%)
+transform: translateX(2em)
+transform: translateY(3in)
+transform: scale(2, 0.5)
+transform: scaleX(2)
+transform: scaleY(0.5)
+transform: rotate(0.5turn)
+transform: skewX(30deg)
+transform: skewY(1.07rad)
+transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0)
+transform: translate3d(12px, 50%, 3em)
+transform: translateZ(2px)
+transform: scale3d(2.5, 1.2, 0.3)
+transform: scaleZ(0.3)
+transform: rotate3d(1, 2.0, 3.0, 10deg)
+transform: rotateX(10deg)
+transform: rotateY(10deg)
+transform: rotateZ(10deg)
+transform: perspective(17px)
+transform: translateX(10px) rotate(10deg) translateY(5px) 
+*/
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function */
+/* https://danielcwilson.com/blog/2019/02/step-and-jump/ */
+
+
+
+/* COMPARISON OPERATORS FUNCTIONS
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+*/
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/clamp() */
+
+
+
+
+/* LOGICAL FUNCTIONS
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+*/
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/clamp() */
+
+:is(:not(div)) {
+    border: 1px solid black;
 }
