@@ -1,0 +1,167 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #f69898;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 990px;
+    margin: 0 auto;
+}
+
+.container {
+    width: calc(50% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    border: 1px solid #d38080;
+    margin: 4px;
+    flex-direction: column;
+}
+
+
+
+.z-squares {
+    transform: skewY(
+            30deg);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    box-shadow: 1rem 1rem 2rem rgb(0 0 0 / 25%);
+    transition: 0.6s ease transform;
+    width: 120px;
+    height: 120px;
+    background: beige;
+    animation-name: z-squares;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes z-squares {
+    from {
+        transform: skewY(
+            0deg);
+    } 
+    to {
+        transform: skewY(
+            30deg);
+    }
+}
+
+.perspective-square {
+    width: 120px;
+          height: 120px;
+          background: beige;
+          transform:
+        translate3d(0px, -16px, 0px)
+        rotateX(51deg)
+        rotateZ(43deg);
+        box-shadow:
+        1px 1px 0 1px #f9f9fb,
+        -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        54px 54px 28px -10px rgba(34, 33, 81, 0.15);      
+        transform-style: preserve-3d;
+        border-radius: 32px;      
+        transition:
+          .4s ease-in-out transform,
+          .4s ease-in-out box-shadow;
+          animation-name: perspective;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+      
+}
+
+@keyframes perspective {
+    to {
+        transform:
+          rotateX(51deg)
+          rotateZ(43deg);
+          box-shadow:
+          1px 1px 0 1px #f9f9fb,
+          -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+          28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+    }
+}
+
+.rotate-square {
+    width: 120px;
+    height: 120px;
+    background: beige;
+    transform: scale(0.8);
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform: scale(0.8) rotate(360deg)
+}
+
+@keyframes rotation {
+    from {
+        transform: scale(0.8) rotate(0)
+    }
+    to {
+        transform: scale(0.8) rotate(360deg)
+    }
+}
+
+
+
+.mini-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.hole {
+    width: 30px;
+    height: 30px;
+    background: beige;
+    border-radius: 100%;
+    margin: 8px;
+}
+
+
+
+// board
+:root {
+    --unit: 20px;
+}
+.board {
+width: calc(var(--unit) * 9);
+height: calc(var(--unit) * 9);
+background-color: beige;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+transform: skew(-40deg, 15deg) rotateX(35deg);
+box-shadow:
+          1px 1px 0 1px #f9f9fb,
+          -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+          28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+}
+
+.front {
+width: calc(var(--unit) * 8);
+height: calc(var(--unit) * 8);
+background-color: #d1d1bd;
+display: flex;
+align-content: flex-start;
+justify-content: flex-start;
+flex-wrap: wrap;
+}
+
+.square {
+width: var(--unit);
+height: var(--unit);
+}
+.square-white {
+background-color: #ccc;
+}
+
+.square-black {
+background-color: white;
+}

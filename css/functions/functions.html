@@ -6,6 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS - Functions</title>
     <link rel="stylesheet" href="functions.css">
+
+
+    <style>
+        :root {
+            --item: 1;
+            --bg-color: red;
+            --font-size: 20px;
+            --width: 1200px;
+            --gutter: 6px;
+            --collumns: 12;
+        }
+
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            width: var(--width);
+            margin: 0 auto;
+        }
+
+        .col {
+            margin: var(--gutter);
+            width: calc(var(--width) / var(--collumns) - (var(--gutter) * 2));
+
+            /* 
+            a coluna tem 1200 / 12 = 100 
+            a coluna tem 6 + 6 px = 100 + 12px = 112px;
+            widht: 1200px[largura] / 12[colunas] - 6px [margem da esquerda] + 6px [margem da direita]
+            */
+            background-color: gainsboro;
+            height: 100vh;
+        }
+
+        .col-6 {
+            width: calc(var(--width) / var(--collumns) * 6 - (var(--gutter) * 2));
+        }
+        
+        .col:nth-child(odd) {
+            background-color: gray;
+        }
+        /* @em dispositivo [all | screen | speech | print]
+        
+        @media print and (argumento) {
+            não quero aquele coluna;
+            .sidebar {
+                display: none;
+            }
+        }
+
+        @media all and (max-width: 768px) {
+            .col {
+                width: 100%;
+            }
+        } */
+    </style>
 </head>
 <body>
     <div class="example">
@@ -14,7 +69,7 @@
 
 
 
-    <div class="nth">
+    <!-- <div class="nth">
         <div class="basket">
             <div class="orange orange-black"></div>
             <div class="orange"></div>
@@ -27,11 +82,27 @@
             <div class="orange"></div>
             <div class="orange"></div>
           </div>
-    </div>
+    </div> -->
 
-
+<!-- 
     <div class="transform">
         <div class="element"></div>
+    </div> -->
+
+
+    <div class="grid">
+        <div class="col col-6 not-this-one"></div>
+        <div class="col col-6"></div>
+        <div class="col col-6"></div>
+        <div class="col col-6"></div>
+        <div class="col col-6"></div>
+        <div class="col col-6"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
     </div>
 </body>
 </html>

@@ -28,13 +28,15 @@ url()
 var() 
 */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:ital@1&display=swap');
 html,
 body {
     margin: 0;
     padding: 0;
     min-width: 100vw;
     min-height: 100vh;
+    font-family: 'Nota Serif', sans-serif;
+    color: white;
 }
 
 .example {
@@ -105,10 +107,10 @@ saturate()
     border-radius: 100%;
   }
   
-  .orange:not(.orange-black) {
+  /* .orange:not(.orange-black) {
     background: gray;
   }
-  
+   */
   /*
   .orange:nth-child(4) {
     background: blue;

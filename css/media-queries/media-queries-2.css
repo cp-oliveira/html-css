@@ -1,0 +1,21 @@
+/* html {
+    background: black;
+    color: blue;
+}
+
+
+@media screen and (max-width: 768px) {
+    html {
+        background-color: red;
+        color:unset;
+    }
+} */
+
+
+html {
+    color: orange;
+}
+
+.box {
+    color: initial;
+}

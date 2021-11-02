@@ -1,0 +1,36 @@
+$collumns: 12;
+$grid-width: 100vw;
+$gutter: 8px;
+
+%column {
+    background: gainsboro;
+    height: 100px;
+    margin: $gutter;
+}
+
+@mixin flex($direction, $justify-content, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-content: $align;
+}
+
+.container {
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+}
+
+@for $i from 1 through $collumns  {
+  .col-#{$i} {  
+    @extend %column;
+    width: calc(#{100% / $collumns * $i} - #{$gutter * 2}); 
+  }
+}
+
+@media screen and (max-width: 768px) {
+    @for $i from 1 through $collumns  {
+        .col-#{$i} {  
+          width: 100%;  
+        }
+      }
+  }
