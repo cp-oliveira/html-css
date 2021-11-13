@@ -7,29 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
-     html {
-        font-size: 14px;
-        font-family:  cursive;
-    }
 
-    .container {
-        font-size: 20px;
-        width: 200px;
-    }
-
-    .container p {
-        /* font-size: 30px; */
-        line-height: 1.6rem;
-        text-decoration: none;
-    }
-</style>
 <body>
-    <div class="container">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quos nam, ullam aut odio et commodi ipsam nulla at provident modi. Exercitationem qui deserunt placeat quibusdam, laudantium saepe ex sint!</p>
-    </div>
+   
 
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, voluptate.</p>
+    <p>Lorem ipsum dolor, <span>sit amet consectetur adipisicing elit.</span> Officia, iure.</p>
+    <p class="texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, sint.</p>
+
+    <p>Lorem ipsum, dolor sit amet  <br> consectetur adipisicing elit. In, est.</p>
+
+    <p>Lorem ipsum, dolor sit amet  <i>consectetur</i> adipisicing elit. In, est.</p>
+    <p>Lorem ipsum, dolor sit amet  <b>consectetur</b> adipisicing elit. In, est.</p>
+    <p>Lorem ipsum, dolor sit amet  <u>consectetur</u> adipisicing elit. In, est.</p>
+    <p>Lorem ipsum, dolor sit amet  <mark>consectetur</mark> adipisicing elit. In, est.</p>
+    <p>Lorem ipsum, dolor sit amet  <del>consectetur</del> adipisicing elit. In, est.</p>
+
+    <pre>
+        let rangeInput = document.querySelector('#font-range');
+        let defaultFontSizeContainer = document.querySelector('.default-font-size')
+
+        let defaultValue = 12;
+        rangeInput.value = defaultValue;
+        defaultFontSizeContainer.innerHTML = defaultValue
+
+        rangeInput.addEventListener('change', function () {
+            defaultFontSizeContainer.innerHTML = this.value;
+            rangeInput.value = this.value;
+            document.querySelector('.example-container').style.fontSize = this.value + 'px'
+        })
+    </pre>
+
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
   
 </body>
 </html>
