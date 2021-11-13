@@ -1,0 +1,64 @@
+@use 'colors';
+
+// A declaração de variáveis
+// :root {
+// --var: value
+// }
+
+// Em SCSS a linguagem a aplicação da variável é feita de outra maneira.
+// o valor é aplicado atráves do símbolo $.
+// os valores são globais. aplicados "à cabeça do ficheiro". 
+// $variavel: valor;
+
+$bg-color: rga(255,255,255,1);
+
+html {
+    background: $bg-color;
+}
+
+// ------------------------------------------------------------------------------
+// as variaveis podem ser encapsuladas e os valores podem ser transformados
+// com outras variavéis.
+$large-width: 2000px;
+$medium-width: $large-width / 2;
+
+.container {
+    width: $medium-width;
+}
+
+// Interpolação
+// $collumns: 1,2,3,4,5,6,7,8,9,10,11,12;
+
+// @each $i in $collumns {
+//     .col-#{$i} {
+//         width: calc(100% / #{$n-collumns} * #{$i});
+//         background-color: white;
+//         min-height: 5px;
+//     }
+// }
+
+$columns: 12;
+@for $i from 1 through $columns {
+    .col-#{$i} {
+        width: calc(100% / #{$columns} * #{$i});
+        background-color: colors.$black;
+        min-height: 5px;
+    }
+}
+
+
+// MIXINS ------------------------------------------------------------
+// @mixin <name> ($arg1, $arg2, $arg3) {
+//     width: $arg1;
+//     height: $arg2;
+//     background: $arg3;
+// }
+
+@mixin card-template($width, $height, $bg-color) {
+    width: $width;
+    height: $height;
+    background: $bg-color;
+}
+
+
+

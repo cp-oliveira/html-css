@@ -1,0 +1,25 @@
+
+%template-button {
+    width: 100px;
+    padding: 8px 12px;
+    margin: 8px;
+    background-color: gainsboro; 
+    border: none;
+    &_sm {
+        padding: 4px 8px;
+    }
+ }
+ 
+ .btn {
+     @extend %template-button;
+     &_primary {
+         background: paletes.$primary;
+     }
+     &_danger {
+         background: paletes.$danger;
+     }
+     &_sm {
+         @extend %template-button_sm;
+     }
+ }
+ 

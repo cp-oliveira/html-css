@@ -1,68 +1,45 @@
-$bg-color: rgb(234, 235, 244);
-$card-color:rgb(255,255,255);
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;600&display=swap');
-html, body {
-    margin: 0;
-    padding: 0;
-    background: $bg-color;
-    box-sizing: border-box;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 16px;
+@use 'colors' as paletes;
+@use 'buttons';
+
+//variavel $chave: valor;
+$bg-color: rgba(255,255,255,1);
+$size: 8px;
+$unit: 'rem';
+
+// @mixin <nome>(arg1, arg2, arg3) {}
+@mixin flex($wrap-nowrap, $justify-content, $row-or-column: row) {
+    display: flex;
+    flex-direction: $row-or-column;
+    justify-content: $justify-content;
+    flex-wrap: $wrap-nowrap;
 }
 
-@mixin flex($direction: row, $wrap, $just-content: flex-start) {
-    display: flex;
-    flex-direction: $direction;
-    flex-wrap: $wrap;
-    justify-content: $just-content;
-    @if ($direction == 'row') {
-        align-content: flex-start;
+.card {
+    @include flex(wrap, space-between, column);
+    background: paletes.$red;
+    &_thumbnail {
+        // width: #{valor: 8px * 4} return 32px;
+        width: #{$size * 4};
+        height: $size * 4;
+        background: paletes.$gray;
     }
-  }
-  
-  %card-template {
-    max-width: 250px;
-    min-height: 250px;
-    background-color: $card-color;
-    border-radius: 4px;
-    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card {
-    @extend %card-template;
-    @include flex(row, wrap);
-    &__top, 
-    &__content, 
-    &__footer { 
-        width: 100%;
-        min-height: 15px; 
-        padding: 8px;
+    &:hover {
+        cursor:pointer;
     }
+}
 
-    &__top {
-        @include flex(row, nowrap, space-between)
-    }
 
-    &__content {
-        @include flex(row, wrap, flex-start);
-        &_image {
-           margin: -8px;
-        }
-        &_information {
-           p {
-            word-break: keep-all;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    line-height: 1.5;
-    max-height: calc(16px * 1.5 * 2);
-    margin: 16px 0 0 0;
-           }
-        }
+@for $i from 1 to 12 {
+    .col-#{$i} {
+        width: calc(100% / #{$i})
     }
+}
 
-    &__footer {
-        @include flex(row, nowrap, flex-end)
+$sizes: 40,50,60;
+
+@each $size in $sizes {
+    .icon-#{$size} {
+        width: #{$size / 2 + $unit};
     }
-  }
-  
-  
+}
+
